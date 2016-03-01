@@ -2,11 +2,11 @@
 <%= form_for(@memo) do |f| %>
     メモ:
     <%= f.text_field :word %>
-    
     <%= f.submit %>
 <% end %>
 
 <% @memos.each do |memo| %>
     メモ：<%= memo.word %>
+    時刻：<%= memo.created_at %>
     <br>
 <% end %>
