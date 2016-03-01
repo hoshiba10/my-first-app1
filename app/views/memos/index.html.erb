@@ -1,0 +1,12 @@
+<h1>Memo</h1>
+<%= form_for(@memo) do |f| %>
+    メモ:
+    <%= f.text_field :word %>
+    
+    <%= f.submit %>
+<% end %>
+
+<% @memos.each do |memo| %>
+    メモ：<%= memo.word %>
+    <br>
+<% end %>
