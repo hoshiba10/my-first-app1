@@ -1,5 +1,5 @@
 class MemosController < ApplicationController
-  before_action :set_memo, only: [:edit, :update]
+  before_action :set_memo, only: [:edit, :update, :destroy]
   def index
     @memo = Memo.new
     @memos = Memo.all
@@ -25,6 +25,11 @@ class MemosController < ApplicationController
     else
       render 'edit'
     end
+  end
+  
+  def destroy
+    @memo.destroy
+    redirect_to root_path
   end
   
   private 

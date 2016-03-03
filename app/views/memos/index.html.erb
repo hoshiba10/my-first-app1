@@ -25,6 +25,7 @@
 <% @memos.each do |memo| %>
     メモ：<%= memo.word %>
     時刻：<%= memo.created_at %>
-    (<%= link_to "edit", edit_memo_path(memo) %>)
+    (<%= link_to "編集", edit_memo_path(memo) %>
+     <%= link_to "削除", memo, method: :delete %>)
     <br>
 <% end %>
