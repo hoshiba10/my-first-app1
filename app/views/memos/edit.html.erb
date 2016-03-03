@@ -1,7 +1,4 @@
-
-<h1>Memo</h1>
-
-
+<h1>メッセージの編集</h1>
 <%= form_for(@memo) do |f| %>
     メモ:
     <%= f.text_field :word %>
@@ -19,12 +16,5 @@
     </div>
 <% end %>
 
+<%= link_to "戻る", '/' %>
 
-
-<br>
-<% @memos.each do |memo| %>
-    メモ：<%= memo.word %>
-    時刻：<%= memo.created_at %>
-    (<%= link_to "edit", edit_memo_path(memo) %>)
-    <br>
-<% end %>
